@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Routing - Code club - NHSBSA
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <!-- You need to include 3 bits of information from this page in your routes function:
+      1. The form action is used to call the function
+      2. The choice a user can make, in this instance 'Yes' or 'No'
+      3. The name from your input so we can see what the user has selected
+      4. 
+    -->
+    
+    <form action="/example1/answer" method="post"><!-- 1. action in the <form> tag -->
+      <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <h1 class="nhsuk-fieldset__heading">
+            Do you know your NHS number?
+          </h1>
+        </legend>
+        <div class="nhsuk-form-group">
+          <div class="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="know-nhs-number-1" name="know-nhs-number" type="radio" value="Yes"><!-- 3. The name of the input-->
+              <label class="nhsuk-label nhsuk-radios__label" for="know-nhs-number-1">
+                Yes <!-- 2. The choice a user can make -->
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="know-nhs-number-2" name="know-nhs-number" type="radio" value="No">
+              <label class="nhsuk-label nhsuk-radios__label" for="know-nhs-number-2">
+                No
+              </label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Continue </button>
+      <!-- When using the JS routes you need a button so that it'll submit the form and trigger the action -->
+    </form>
+  </div>
+</div>
+{% endblock %}
