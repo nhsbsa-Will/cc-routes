@@ -1,43 +1,40 @@
-<!-- Use this page as the index for your project -->
-
-<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
-
-<!-- Extends the layout from /views/layout.html -->
 {% extends 'layout.html' %}
-<!-- 
-  In /views/layout.html you can:
-    - change the header and footer 
-    - add custom CSS and JavaScript
--->
 
-<!-- Set the page title -->
 {% block pageTitle %}
   Routing - Code club - NHSBSA
 {% endblock %}
 
-<!-- For adding a breadcrumb -->
-<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
 {% endblock %}
 
-<!-- For adding a back link -->
-<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
 {% block outerContent %}
 {% endblock %}
 
-<!-- For adding page content -->
-<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-
       <h1 class="nhsuk-heading-xl">Code Club Routing</h1>
-      <p>In this session we'll go look at how to set up the javascript routing in the NHSUK prototype kit.</p>
+      
+      <p>In this session we'll look at how to set up the javascript routing in the NHSUK prototype kit.</p>
+      
       <p>You need to access the file <code style="background:#fff; color: red; padding:5px;">/app/routes.js</code>.</p>
-      <a href="example1/page1" class="nhsuk-button" data-module="nhsuk-button" role="button">Start</a>
+      
+      <p>Before we start adding to it, it should look like this:</p>
+      
+      <a class="nhsuk-u-display-block nhsuk-u-margin-bottom-5" href="/images/screenshot-01.png">
+        <img class="nhsuk-image__img" src="/images/screenshot-01.png" alt="screenshot showing what the routes.js file looks like" style="border:1px solid #d8dde0">
+      </a>
 
-      <!-- End of content -->
-
+      <p><a href="example1/radios" class="nhsuk-button" data-module="nhsuk-button" role="button">Start</a></p>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <h2 class="nhsuk-heading-m">Examples</h2>
+      <ol class="nhsuk-list nhsuk-list--number">
+        <li><a href="/example1/radios">Radio buttons - done</a></li>
+        <li><a href="/example2/radios">Radio buttons</a></li>
+        <li><a href="/example3/text-input">Text input</a></li>
+        <li><a href="/example4/checkbox">Checkboxes</a></li> 
+      </ol>
     </div>
   </div>
 {% endblock %}
