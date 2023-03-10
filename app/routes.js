@@ -3,7 +3,7 @@ const express = require('express');
 
 const router = express.Router();
 
-// Branching example 1 - Radios
+// EXAMPLE 1 - RADIOS - DONE
 
 // this is where your form action goes
 router.post('/example1/radios', (req, res) => {
@@ -21,6 +21,7 @@ router.post('/example1/radios', (req, res) => {
 });
 
 // EXAMPLE 2 - RADIOS
+
 
 
 // EXAMPLE 3 - TEXT INPUT
@@ -65,6 +66,7 @@ router.post('/example5/select', function (req, res) {
 
   if (select == 1) {
     res.redirect('/example5/yes');
+   // FILL IN THE REST 
   } else {
     res.redirect('/');
   }  
