@@ -39,7 +39,7 @@ router.post('/example3/name', function (req, res) {
 });
 
 
-// EXAMPLE 4 - Checkboxes
+// EXAMPLE 4 - CHECKBOXES
 router.post('/example4/checkbox', (req, res) => {
 
   // This creates an array of the values checked from the checkbox options
@@ -58,5 +58,17 @@ router.post('/example4/checkbox', (req, res) => {
     res.redirect('/');
   }
 }); 
+
+// EXAMPLE 5 - SELECT
+router.post('/example5/select', function (req, res) {
+  var select = req.session.data['select-1'];
+
+  if (select == 1) {
+    res.redirect('/example5/yes');
+  } else {
+    res.redirect('/');
+  }  
+});
+
 
 module.exports = router; // All your routes need to be above this line 
