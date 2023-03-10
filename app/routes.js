@@ -64,7 +64,7 @@ router.post('/example4/checkbox', (req, res) => {
 router.post('/example5/select', function (req, res) {
   var select = req.session.data['select-1'];
 
-  if (select == 1) {
+  if (select == '1') {
     res.redirect('/example5/yes');
    // FILL IN THE REST 
   } else {
